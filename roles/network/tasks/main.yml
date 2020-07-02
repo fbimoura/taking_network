@@ -8,4 +8,4 @@
   - name: gravando saída
     set_stats:
       data: 
-        resultado_nome: "{{ address_result.ansible_facts.address }}"
+        resultado_address: "{{ address_result.ansible_facts.address }}"
