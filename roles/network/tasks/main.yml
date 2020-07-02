@@ -3,7 +3,10 @@
   - name: Coletando fatos
     set_fact:
       address: "{{ ansible_default_ipv4.address }}"
-    register: address_result     
+    register: address_result
+
+  - debug:
+      var: address_result
 
   - name: gravando saída
     set_stats:
