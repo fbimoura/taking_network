@@ -2,10 +2,10 @@
 # tasks file for hostname
   - name: Coletando fatos
     set_fact:
-      nome: "{{ ansible_default_ipv4.address }}"
+      address: "{{ ansible_default_ipv4.address }}"
     register: address_result     
 
   - name: gravando saída
     set_stats:
       data: 
-        resultado_address: "{{ address_result }}"
+        resultado_nome: "{{ address_result.ansible_facts.address }}"
