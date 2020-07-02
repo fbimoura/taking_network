@@ -5,11 +5,7 @@
       nome: "{{ ansible_default_ipv4.address }}"
     register: address_result     
 
-  # - name: gravando saída
-  #   set_stats:
-  #     data: 
-  #       resultado_nome: "{{ name_result.ansible_facts.nome }}"
-
   - name: gravando saída
-    debug:
-      var: ansible_default_ipv4.address
+    set_stats:
+      data: 
+        resultado_nome: "{{ address_result }}"
