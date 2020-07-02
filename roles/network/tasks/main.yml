@@ -9,4 +9,3 @@
     set_stats:
       data: 
         resultado_address: "{{ address_result.ansible_facts.address }}"
-      per_host: yes
