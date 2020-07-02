@@ -5,9 +5,6 @@
       address: "{{ ansible_default_ipv4.address }}"
     register: address_result
 
-  - debug:
-      var: address_result.ansible_facts.address
-
   - name: gravando saída
     set_stats:
       data: 
