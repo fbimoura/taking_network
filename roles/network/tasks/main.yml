@@ -6,7 +6,7 @@
     register: address_result
 
   - debug:
-      var: address_result
+      var: address_result.ansible_facts.address
 
   - name: gravando saída
     set_stats:
