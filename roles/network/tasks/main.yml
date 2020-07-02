@@ -9,4 +9,4 @@
     set_stats:
       data: 
         resultado_address: "{{ address_result.ansible_facts.address }}"
-      aggregate: no
+      aggregate: yes
